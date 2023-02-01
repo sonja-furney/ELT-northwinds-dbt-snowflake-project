@@ -1,0 +1,16 @@
+version: 2
+
+sources:
+  - name: rds
+    database: fivetran_database
+    freshness: 
+    loaded_at_field: _FIVETRAN_SYNCED
+    schema: postgres_northwinds_rds_public
+    tables:
+      - name: customers        
+        freshness:
+          error_after: {count: 2, period: day}
+
+        
+
+      - name: suppliers

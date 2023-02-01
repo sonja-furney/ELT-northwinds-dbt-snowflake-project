@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: hubspot
+    database: LABS_DB
+    schema: NORTHWINDS_DATA
+    tables:
+      - name: contacts
+    
+      - name: companies
+
